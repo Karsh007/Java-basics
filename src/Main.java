@@ -38,8 +38,44 @@ public class Main {
         System.out.println("Modulo: " + (a % b));
         System.out.println("Is a > b? " + (a > b));
 
+//  CONTROL FLOW (if/else)
+        if (age >= 18) {
+            System.out.println("You are an adult.");
+        } else {
+            System.out.println("You are a minor.");
+        }
+
+        // for loop
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Count: " + i);
+        }
 
 
+        // while loop
+        int count = 3;
+        while (count > 0) {
+            System.out.println("Countdown: " + count);
+            count--;
+        }
 
+        // switch
+        int day = 3;
+        switch (day) {
+            case 1 -> System.out.println("Monday");
+            case 2 -> System.out.println("Tuesday");
+            case 3 -> System.out.println("Wednesday");
+            default -> System.out.println("Other day");
+        }
+
+        // 5. ARRAYS
+        int[] numbers = {1, 2, 3, 4, 5};
+        System.out.println("First element in array: " + numbers[0]);
+
+
+        // Loop through array
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 }
