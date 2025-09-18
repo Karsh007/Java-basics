@@ -77,5 +77,55 @@ public class Main {
             System.out.print(num + " ");
         }
         System.out.println();
+
+
+
+
+
+        // 7. EXCEPTION HANDLING
+        try {
+            int result = 10 / 0; // risky code
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Division by zero is not allowed!");
+        } finally {
+            System.out.println("This block always runs.");
+        }
+
+
+        // Creating  objects
+        Person p1 = new Person("Bhanu", 25);
+        Person p2 = new Person("Alice", 30);
+        Person p3 = new Person("Bob", 28);
+
+        //using Methods
+        p1.introduce();
+        System.out.println(p2.name + " adult? " + p2.isAdult());
+
+
+        // 1. LIST (allows duplicates, keeps order)
+        java.util.List<Person> peopleList = new java.util.ArrayList<>();
+        peopleList.add(p1);
+        peopleList.add(p2);
+        peopleList.add(p3);
+        peopleList.add(p1); // duplicate allowed
+        System.out.println("List: " + peopleList);
+
+        // 2. SET (no duplicates, no order guarantee)
+        java.util.Set<Person> peopleSet = new java.util.HashSet<>();
+        peopleSet.add(p1);
+        peopleSet.add(p2);
+        peopleSet.add(p3);
+        peopleSet.add(p1); // duplicate ignored
+        System.out.println("Set: " + peopleSet);
+
+        // 3. MAP (key-value pairs)
+        java.util.Map<Integer, Person> peopleMap = new java.util.HashMap<>();
+        peopleMap.put(1, p1);
+        peopleMap.put(2, p2);
+        peopleMap.put(3, p3);
+        peopleMap.put(4, p1); // keys unique, values can repeat
+        System.out.println("Map: " + peopleMap);
     }
+
 }
